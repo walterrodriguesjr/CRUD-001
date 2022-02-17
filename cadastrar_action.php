@@ -16,8 +16,8 @@ if($nome && $email){
     $sql->bindValue(':email', $email);
     /* se tudo ocorreu bem, executa a ação */
     $sql->execute();
-
     /* se, no banco, não ouver já cadastrada os dados inseridos no input, insere no banco realizando as ações abaixo */
+    /* se no banco for encontrado pelo menos 1 valor ou mais, ele executa */
     if($sql->rowCount() === 0){
 
 

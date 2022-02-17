@@ -32,9 +32,12 @@ if ($id) {
 <h1>Editar Usuário</h1>
 <form method="POST" action="editar_action.php">
 
-<label for="">Nome:</label>
-<input type="text" name="nome" value="<?=$usuario['nome'];?>">
-<label for="">E-mail:</label>
-<input type="email" name="email" value="<?=$usuario['email'];?>">
+    <!-- injetando o php no html, no caso, a variavel $usuario que contem os itens do $sql, traz como indice o item selecionado do banco -->
+    <input type="hidden" name="id" value="<?= $usuario['id']; ?>">
+    <label for="">Nome:</label>
+    <input type="text" name="nome" value="<?= $usuario['nome']; ?>">
+    <label for="">E-mail:</label>
+    <input type="email" name="email" value="<?= $usuario['email']; ?>">
+    <input type="submit" value="Atualizar">
 
 </form>
